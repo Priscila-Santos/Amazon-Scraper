@@ -1,6 +1,13 @@
-function renderStars(rating) {
+function renderStars(rating, reviewCount) {
+  const container = document.createElement("div");
+  container.style.display = "flex";
+  container.style.alignItems = "center";
+  container.style.gap = "8px";
+
   const starsDiv = document.createElement("div");
   starsDiv.className = "stars";
+  starsDiv.style.display = "flex";
+  starsDiv.style.gap = "2px";
 
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating - fullStars >= 0.25 && rating - fullStars < 0.75;
@@ -22,17 +29,25 @@ function renderStars(rating) {
   for (let i = totalStars; i < maxStars; i++) {
     const emptyStar = document.createElement("div");
     emptyStar.className = "star";
-    emptyStar.style.backgroundColor = "#ccc"; // cinza para estrelas não preenchidas
+    emptyStar.style.backgroundColor = "#ccc";
     starsDiv.appendChild(emptyStar);
   }
 
-  return starsDiv;
+  const ratingText = document.createElement("span");
+  ratingText.textContent = `${rating.toFixed(1)}`;
+  ratingText.style.fontWeight = "bold";
+  ratingText.style.color = "#333";
+
+  container.appendChild(starsDiv);
+  container.appendChild(ratingText);
+
+  return container;
 }
 
 document.getElementById("searchBtn").addEventListener("click", async () => {
   const keyword = document.getElementById("keyword").value.trim();
   const resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = "🔄 Buscando...";
+  resultsDiv.innerHTML = "🔄 Carregando produtos...";
 
   try {
     const res = await fetch(`http://localhost:3000/api/scrape?keyword=${encodeURIComponent(keyword)}`);
