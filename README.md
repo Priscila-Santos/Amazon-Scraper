@@ -17,8 +17,6 @@ Este projeto realiza o scraping de produtos da Amazon a partir da primeira pági
 - Código limpo seguindo princípios SOLID
 
 ---
-## Imagem do App
-![HomePage](./frontend/public/project-gif.gif)
 
 ## 🧰 Tecnologias Utilizadas
 
@@ -113,6 +111,9 @@ Você pode adicionar testes com Vitest para o frontend e usar mocks para testar 
 - Comportamento em caso de erro
 
 ---
+## Imagem do App
+![HomePage](./frontend/public/project-gif.gif)
+
 
 ## 📌 Observações
 
