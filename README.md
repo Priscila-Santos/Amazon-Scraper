@@ -17,6 +17,8 @@ Este projeto realiza o scraping de produtos da Amazon a partir da primeira pági
 - Código limpo seguindo princípios SOLID
 
 ---
+## Imagem do App
+![HomePage](./frontend/public/project-gif.gif)
 
 ## 🧰 Tecnologias Utilizadas
 
