@@ -1,18 +1,26 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  font-family: "Inknut Antiqua", serif;
+  background: #BDCBD5;
   text-align: center;
   padding: 2rem;
+  margin: 0;
 }
 
 input {
   padding: 0.5rem;
   width: 250px;
+  border-radius: 4px;
+  border: none;
 }
 
 button {
   padding: 0.5rem 1rem;
   margin-left: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+  cursor: pointer;
 }
 
 #results {
@@ -23,14 +31,61 @@ button {
 }
 
 .product {
-  background: white;
+  background: #F6F6F6;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product img {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin: 0.5rem 0;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.half-star {
+  width: 10px;
+  height: 20px;
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    50% 70%,
+    50% 70%,
+    50% 70%,
+    50% 70%
+  );
 }
