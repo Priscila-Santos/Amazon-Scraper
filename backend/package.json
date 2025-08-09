@@ -1,12 +1,16 @@
 {
   "name": "backend",
-  "module": "index.ts",
+  "version": "1.0.0",
+  "main": "src/index.js",
   "type": "module",
   "private": true,
   "scripts": {
-  "test": "vitest"
-  },
+    "start": "bun run src/index.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
 
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "nock": "^14.0.9",

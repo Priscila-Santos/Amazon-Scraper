@@ -39,7 +39,7 @@ export async function scrapeAmazon(keyword) {
         item.querySelector("h2")?.textContent?.trim() ||
         "Sem título";
 
-      // 🔹 Extrai a avaliação (ex: "4.5 out of 5 stars")
+      // 🔹 Extrai a avaliação
       const ratingText = item.querySelector("span.a-icon-alt")?.textContent?.trim();
       const rating = ratingText?.match(/[\d.]+/)?.[0] || "Sem avaliação";
 
