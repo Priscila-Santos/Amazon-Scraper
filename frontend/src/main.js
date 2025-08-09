@@ -1,5 +1,5 @@
 // Função que renderiza as estrelas de avaliação visualmente
-function renderStars(rating, reviewCount) {
+export function renderStars(rating, reviewCount) {
   const container = document.createElement("div");
   container.style.display = "flex";
   container.style.alignItems = "center";
